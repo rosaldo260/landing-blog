@@ -1,0 +1,93 @@
+.card {
+  border-radius: 5px;
+  position: relative;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+.cardWhite {
+  background-color: #fff;
+}
+
+.cardWhite:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  box-shadow: 0 24px 64px rgba(8, 13, 43, 0.08);
+  z-index: 1;
+}
+
+.actionCard {
+  box-shadow: 0 24px 64px rgba(8, 13, 43, 0.08);
+}
+
+.cardDark {
+  background-color: #413e5c;
+}
+
+.icon {
+  margin-bottom: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+.iconLarge {
+  width: 70px;
+  height: 70px;
+}
+
+.iconMedium {
+  width: 50px;
+  height: 50px;
+}
+
+.iconSmall {
+  width: 40px;
+  height: 40px;
+}
+
+.iconAbsolute {
+  /* position: absolute; */
+  left: 1.5rem;
+  top: -35px;
+}
+
+.img {
+  color: #fff;
+  font-size: 2.6rem;
+}
+
+.imgMedium {
+  font-size: 2rem;
+}
+
+.imgSmall {
+  font-size: 1.8rem;
+}
+
+.bubble {
+  position: relative;
+  line-height: 24px;
+  background: #fff;
+  border-radius: 10px;
+  text-align: left;
+  padding: 8px 18px;
+  width: 170px;
+}
+
+.bubble:before {
+  content: '';
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 12px solid transparent;
+  border-right: 20px solid #fff;
+  border-top: 12px solid #fff;
+  border-bottom: 20px solid transparent;
+  right: 34px;
+  bottom: -20px;
+}

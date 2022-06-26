@@ -1,0 +1,20 @@
+.badge {
+  position: absolute;
+  top: -7px;
+  right: -7px;
+  height: 16px;
+  width: 16px;
+  display: inline-block;
+  padding: 0.3em;
+  font-size: 0.6rem;
+  text-align: center;
+  border-radius: 50%;
+  background: #21B6D9;
+  color: #FFFFFF;
+  border: 1px solid #FFFFFF;
+  }
+
+  .badge-alert {
+  background: #EF5737;
+  color: #FFFFFF;
+}

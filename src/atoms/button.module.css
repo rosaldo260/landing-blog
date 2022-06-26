@@ -1,0 +1,112 @@
+.button {
+  line-height: 1.75;
+  border-radius: 6px;
+  padding: 6px 14px;
+  font-weight: 500;
+  border: 1px solid transparent;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.buttonPrimary {
+  color: #fff;
+  background-repeat: repeat-x;
+  box-shadow: 0px 3px 1px -2px rgb(3 36 92 / 5%),
+    0px 2px 2px 0px rgb(3 36 92 / 5%), 0px 1px 5px 0px rgb(3 36 92 / 5%);
+}
+
+.buttonPrimary:hover {
+  background-color: #4154ed;
+  background-image: linear-gradient(
+    to bottom,
+    #4154ed 0%,
+    rgb(52, 67, 190) 100%
+  );
+}
+
+/* .buttonDarker {
+  color: #fff;
+  border-color: #0e1e9c;
+  background-color: #3146ec;
+  background-repeat: repeat-x;
+  background-image: linear-gradient(
+    to bottom,
+    rgb(97, 114, 239) 0%,
+    rgb(83, 99, 222) 100%
+  );
+  box-shadow: 0px 3px 1px -2px rgb(3 36 92 / 5%),
+    0px 2px 2px 0px rgb(3 36 92 / 5%), 0px 1px 5px 0px rgb(3 36 92 / 5%);
+}
+
+.buttonDarker:hover {
+  background-image: linear-gradient(to bottom, #5a6bef 0%, #4053ec 100%);
+} */
+
+.buttonSmall {
+  font-size: 0.85rem;
+  padding: 4px 14px;
+}
+
+.buttonMedium {
+  font-size: 0.95rem;
+  padding: 6.5px 20px;
+}
+
+.buttonBig {
+  font-size: 1.1rem;
+  padding: 8px 36px;
+}
+
+.buttonContained {
+  border-color: #142adc;
+  background-color: #4154ed;
+  background-image: linear-gradient(
+    to bottom,
+    rgb(74, 92, 237) 0%,
+    rgb(60, 78, 220) 100%
+  );
+}
+
+.buttonContained:hover {
+  background-color: #4154ed;
+  background-image: linear-gradient(
+    to bottom,
+    #4154ed 0%,
+    rgb(52, 67, 190) 100%
+  );
+}
+
+.buttonOutlined {
+  border-color: #142adc;
+  color: #142adc;
+}
+
+.buttonOutlined:hover {
+  color: #fff;
+  background-color: #4154ed;
+  background-image: linear-gradient(
+    to bottom,
+    #4154ed 0%,
+    rgb(52, 67, 190) 100%
+  );
+}
+
+.buttonInverted {
+  border-color: #000;
+  border-width: 1.5px;
+  background-color: #fff;
+  color: #000;
+}
+
+.buttonInverted:hover {
+  border-color: #000;
+  background-color: #fff;
+  background-image: none;
+  color: #000;
+}

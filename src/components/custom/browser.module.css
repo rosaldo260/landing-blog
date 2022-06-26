@@ -1,0 +1,44 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 1px solid #efefef;
+  overflow: hidden;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.chrome {
+  padding: 6px 8px;
+  width: 100%;
+  background: #0b1c38;
+  box-sizing: border-box;
+}
+
+.chromeButtons {
+  display: flex;
+}
+
+.chromeButton {
+  width: 6px;
+  height: 6px;
+  background: #ed2b2b;
+  margin: 0 6px 0 0;
+  border: 1px solid #d31212;
+  border-radius: 10px;
+}
+
+.chromeButton:nth-child(2) {
+  background: #ffd144;
+  border: 1px solid #ffc411;
+}
+
+.chromeButton:last-child {
+  background: #6dd345;
+  border: 1px solid #54b92c;
+}
+
+.imageContainer {
+  text-align: center;
+  font-size: 0;
+}

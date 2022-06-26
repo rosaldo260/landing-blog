@@ -1,0 +1,24 @@
+ul.featureList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.check {
+  padding-left: 24px;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.check:before {
+  content: '';
+  width: 17px;
+  height: 13px;
+  left: -4px;
+  top: 7px;
+  position: absolute;
+  background-image: url(/check.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50%;
+}
