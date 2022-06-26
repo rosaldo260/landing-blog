@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styles from './browser.module.css'
+import * as styles from './browser.module.css'
 
 const BrowserBox = ({ img, imgAlt, video, element }) => (
   <div className="shadow-lg rounded-b-lg">

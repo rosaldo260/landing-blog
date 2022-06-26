@@ -3,7 +3,7 @@ import clsx from 'clsx'
 import { MdLiveHelp, MdLibraryBooks, MdVideoCall } from 'react-icons/md'
 import Layout from '@components/Layout'
 import { Config, Routes } from '@constants'
-import styles from '@components/card.module.css'
+import * as styles from '@components/card.module.css'
 import HelmetHelper from '@components/HelmetHelper'
 
 const HelpIndex = () => {

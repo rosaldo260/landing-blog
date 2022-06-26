@@ -2,7 +2,7 @@ import React from 'react'
 import { Config } from '@constants'
 import clsx from 'clsx'
 import { MdLiveHelp } from 'react-icons/md'
-import styles from './faq.module.css'
+import * as styles from './faq.module.css'
 
 const createData = (question, answer) => ({ question, answer })
 

@@ -9,7 +9,7 @@ import imgActiveTimes from '@static/security/active-times.svg'
 import imgActivity from '@static/security/activity.svg'
 import imgIPAddress from '@static/security/ip-address.svg'
 import imgAuthor from '@static/security/author-2.png'
-import styles from './card.module.css'
+import * as styles from './card.module.css'
 
 const SecurityItem = ({
   title,

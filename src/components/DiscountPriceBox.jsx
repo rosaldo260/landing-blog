@@ -10,7 +10,7 @@ import {
 import Button from '@atoms/Button'
 import { Routes } from '@constants'
 import clsx from 'clsx'
-import styles from './pricing.module.css'
+import * as styles from './pricing.module.css'
 import stylesCard from './card.module.css'
 import ButtonBadge from './ButtonBadge'
 

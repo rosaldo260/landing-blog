@@ -8,7 +8,7 @@ import logo5 from '@static/clients/appmixer.svg'
 // import logo6 from '@static/clients/advertia.svg'
 import logo7 from '@static/clients/info-msp.svg'
 import Typography from '@atoms/Typography'
-import styles from './clients.module.css'
+import * as styles from './clients.module.css'
 
 const ClientLogo = ({ img, name, style }) => (
   <div className="w-1/2 flex items-center justify-center md:w-100 px-4 sm:p-0 my-5 sm:m-0">

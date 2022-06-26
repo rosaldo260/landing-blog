@@ -9,12 +9,12 @@
   font-size: 0.6rem;
   text-align: center;
   border-radius: 50%;
-  background: #21B6D9;
-  color: #FFFFFF;
-  border: 1px solid #FFFFFF;
-  }
+  background: #21b6d9;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
 
-  .badge-alert {
-  background: #EF5737;
-  color: #FFFFFF;
+.badge-alert {
+  background: #ef5737;
+  color: #ffffff;
 }
