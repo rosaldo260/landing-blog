@@ -7,16 +7,13 @@ import { documentToPlainTextString } from '@contentful/rich-text-plain-text-rend
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { parseHtml } from 'contentful-html-rich-text-converter'
 import readingTime from 'reading-time'
-import Seo from '@components/seo'
+import { getImagePath } from '@utils'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import HelmetHelper from '@components/HelmetHelper'
 import TableOfContents from '@components/TableOfContent'
 import Layout from '@components/Layout'
 import BottomCta from '@components/BottomCta'
-import Hero from '../components/hero'
-import Tags from '../components/tags'
 import * as styles from './blog-post.module.css'
-import { getImagePath } from '@utils'
-import { GatsbyImage } from 'gatsby-plugin-image'
 
 const getSubstring = (str = '') => str.substring(0, 155)
 
