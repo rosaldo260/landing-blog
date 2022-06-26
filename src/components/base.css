@@ -130,23 +130,38 @@ ul {
   opacity: 0;
 }
 
-.section-table {
-  width: 200px;
-}
-
 .section-placeholder {
   width: 200px;
 }
 
-.section-sticky {
-  position: sticky;
-  top: 100px;
-  padding: 10px 10px 10px 0;
-  margin-bottom: 20px;
-  border-right: 1px solid #e7e7e7;
-  overflow-y: auto;
-  max-height: 90vh;
-  max-height: calc(100vh - 50px - 20px);
+@media (min-width: 640px) {
+  .section-sticky {
+    position: sticky;
+    top: 100px;
+    padding: 10px 10px 10px 0;
+    margin-bottom: 20px;
+    border-right: 1px solid #e7e7e7;
+    overflow-y: auto;
+    max-height: 90vh;
+    max-height: calc(100vh - 50px - 20px);
+  }
+
+  .section-table {
+    width: 200px;
+  }
+}
+
+@media (max-width: 640px) {
+  .section-sticky {
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    position: relative;
+    padding: 12px 20px;
+    margin-bottom: 20px;
+    overflow-y: auto;
+    max-height: 90vh;
+    max-height: calc(100vh - 50px - 20px);
+  }
 }
 
 .section-sticky > div {
@@ -166,9 +181,18 @@ ul {
 
 .section-table li a {
   font-size: 0.85rem;
-  display: block;
-  width: 100%;
   color: #333;
+}
+
+@media (min-width: 640px) {
+  .section-table li a {
+    display: block;
+    width: 100%;
+  }
+
+  .section-table {
+    width: 200px;
+  }
 }
 
 .section-table li a:hover {

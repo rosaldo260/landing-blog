@@ -123,7 +123,7 @@ class BlogPostTemplate extends React.Component {
         </HelmetHelper>
         <div className="pt-8 pb-0">
           {header}
-          <div className="flex py-6">
+          <div className="md:flex py-6">
             <TableOfContents body={bodyRichText} />
             {body}
             <div className="section-placeholder" />
