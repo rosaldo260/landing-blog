@@ -11,8 +11,6 @@ import Typography from '@atoms/Typography'
 const BlogIndex = (props) => {
   const posts = get(props, 'data.allContentfulBlogPost.nodes')
 
-  console.log(posts)
-
   return (
     <Layout>
       <div className="relative bg-white">
@@ -27,15 +25,13 @@ const BlogIndex = (props) => {
             opportunities with detailed tutorials and case studies.
           </Typography.SUBHEADER>
         </div>
-        <div className="">
-          <div className="max-w-7xl mx-auto pb-20 mb-4">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-16">
-              {posts.map((post) => (
-                <div key={post.slug}>
-                  <ArticlePreview data={post} />
-                </div>
-              ))}
-            </div>
+        <div className="max-w-7xl mx-auto pb-20 mb-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-16">
+            {posts.map((post) => (
+              <div key={post.slug}>
+                <ArticlePreview data={post} />
+              </div>
+            ))}
           </div>
         </div>
       </div>

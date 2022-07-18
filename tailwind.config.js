@@ -29,7 +29,7 @@ module.exports = {
       sm: '.9rem',
       md: '.95rem',
       base: '1rem',
-      lg: '1.125rem',
+      lg: '1.1rem',
       xl: '1.25rem',
       '1xl': '1.35rem',
       '2xl': '1.5rem',

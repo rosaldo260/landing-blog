@@ -11,6 +11,9 @@ import HelmetHelper from '@components/HelmetHelper'
 import TableOfContents from '@components/TableOfContent'
 import Layout from '@components/Layout'
 import BottomCta from '@components/BottomCta'
+import sampleSize from 'lodash/sampleSize'
+import ArticleMiniPreview from '@components/ArticleMiniPreview'
+import Typography from '@atoms/Typography'
 // import * as styles from './blog-post.module.css'
 
 const getSubstring = (str = '') => str.substring(0, 155)
@@ -57,9 +60,9 @@ const createLandLink = (children) => {
 
 const BlogPostTemplate = (props) => {
   const post = get(props, 'data.contentfulBlogPost')
-  // const previous = get(props, 'data.previous')
-  // const next = get(props, 'data.next')
-  // const timeToRead = 3
+
+  const allSimilarPosts = get(props, 'data.similarPosts.nodes')
+  const sampleSimilarPosts = sampleSize(allSimilarPosts, 4)
 
   const bodyRichText = parseHtml(post.body.childMarkdownRemark.html)
 
@@ -146,41 +149,22 @@ const BlogPostTemplate = (props) => {
           <div className="section-placeholder" />
         </div>
       </div>
-      <BottomCta />
 
-      {/* <div className={styles.container}>
-          <span className={styles.meta}>
-            {post.author?.name} &middot;{' '}
-            <time dateTime={post.rawDate}>{post.publishDate}</time> –{' '}
-            {timeToRead} minute read
-          </span>
-          <div className={styles.article}>
-            <div className={styles.body}>
-              {bodyRichText && documentToReactComponents(bodyRichText, options)}
+      <div className="max-w-7xl mx-auto py-14">
+        <div className="mb-6">
+          <Typography.H2>Related posts</Typography.H2>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          {sampleSimilarPosts.map((similarPost) => (
+            <div key={post.slug}>
+              <ArticleMiniPreview data={similarPost} />
             </div>
-            <Tags tags={post.tags} />
-            {(previous || next) && (
-              <nav>
-                <ul className={styles.articleNavigation}>
-                  {previous && (
-                    <li>
-                      <Link to={`/blog/${previous.slug}`} rel="prev">
-                        ← {previous.title}
-                      </Link>
-                    </li>
-                  )}
-                  {next && (
-                    <li>
-                      <Link to={`/blog/${next.slug}`} rel="next">
-                        {next.title} →
-                      </Link>
-                    </li>
-                  )}
-                </ul>
-              </nav>
-            )}
-          </div>
-        </div> */}
+          ))}
+        </div>
+      </div>
+
+      <BottomCta />
     </Layout>
   )
 }
@@ -188,11 +172,7 @@ const BlogPostTemplate = (props) => {
 export default BlogPostTemplate
 
 export const pageQuery = graphql`
-  query BlogPostBySlug(
-    $slug: String!
-    $previousPostSlug: String
-    $nextPostSlug: String
-  ) {
+  query BlogPostBySlug($slug: String!) {
     contentfulBlogPost(slug: { eq: $slug }) {
       slug
       title
@@ -227,13 +207,37 @@ export const pageQuery = graphql`
         description
       }
     }
-    previous: contentfulBlogPost(slug: { eq: $previousPostSlug }) {
-      slug
-      title
-    }
-    next: contentfulBlogPost(slug: { eq: $nextPostSlug }) {
-      slug
-      title
+    similarPosts: allContentfulBlogPost(filter: { slug: { ne: $slug } }) {
+      nodes {
+        title
+        author {
+          name
+          title
+          company
+          image {
+            gatsbyImageData(
+              layout: FULL_WIDTH
+              placeholder: BLURRED
+              width: 60
+              height: 60
+            )
+          }
+        }
+        slug
+        publishDate(formatString: "MMMM Do, YYYY")
+        tags
+        heroImage {
+          gatsbyImageData(
+            placeholder: BLURRED
+            height: 110
+            width: 200
+            layout: FULL_WIDTH
+          )
+        }
+        description {
+          description
+        }
+      }
     }
   }
 `
